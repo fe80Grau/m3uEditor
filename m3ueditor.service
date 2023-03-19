@@ -1,0 +1,13 @@
+[Unit]
+Description=m3uEditor Service
+After=network-online.target
+
+[Service]
+WorkingDirectory=/opt/m3uEditor
+Type=simple
+ExecStart=/usr/bin/python3 /opt/m3uEditor/main.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target
